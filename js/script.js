@@ -1,10 +1,10 @@
 // header & fixed button & fixed breadcrumbs
-const header = document.getElementById("header");
-const headerFix = document.getElementById("header-fix");
-const headerSimpleFix = document.getElementById("header-simple-fix");
-const fullscreen = document.querySelector(".fullscreen");
-const callbackButton = document.getElementById("callback-button");
-const breadcrumbs = document.querySelector('.breadcrumbs');
+// const header = document.getElementById("header");
+// const headerFix = document.getElementById("header-fix");
+// const headerSimpleFix = document.getElementById("header-simple-fix");
+// const fullscreen = document.querySelector(".fullscreen");
+// const callbackButton = document.getElementById("callback-button");
+// const breadcrumbs = document.querySelector('.breadcrumbs');
 
 // if (!!headerSimpleFix) {
 //   const headerSimpleFixHeight = headerSimpleFix.offsetHeight;
@@ -100,6 +100,22 @@ new Swiper(".fullscreen-slider", {
   },
 });
 
+new Swiper(".fullscreen-about-slider", {
+  navigation: {
+    nextEl: ".fullscreen-about-next",
+    prevEl: ".fullscreen-about-prev"
+  },
+  speed: 2000,
+  // effect: "cube",
+  // cubeEffect: {
+  //   slideShadows: true,
+  //   shadow: true,
+  //   shadowOffset: 20,
+  //   shadowScale: 0.94,
+  // },
+  autoHeight: true,
+});
+
 //tabs
 let tabs = document.querySelectorAll("._tabs");
 for (let index = 0; index < tabs.length; index++) {
@@ -120,59 +136,6 @@ for (let index = 0; index < tabs.length; index++) {
     });
   }
 }
-
-// load more
-const COUNT_SHOW_CARDS_CLICK = 6;
-const cards = document.querySelector(".cards");
-const btnShowCards = document.querySelector(".show-cards");
-let shownCards = COUNT_SHOW_CARDS_CLICK;
-let countClickBtnShowCards = 1;
-const cardsArray = Array.from(document.querySelectorAll(".card"));
-const cardsArrayVisible = cardsArray.slice(0, COUNT_SHOW_CARDS_CLICK);
-
-if (
-  cardsArray.length >= shownCards &&
-  btnShowCards.classList.contains("none")
-) {
-  btnShowCards.classList.remove("none");
-}
-
-cardsArrayVisible.forEach(function (item) {
-  item.classList.add("visible");
-  item.classList.remove("none");
-});
-
-if (!!btnShowCards) {
-  btnShowCards.addEventListener("click", sliceArrayCards);
-}
-
-function sliceArrayCards() {
-  if (shownCards >= cardsArray.length) return;
-
-  countClickBtnShowCards++;
-
-  const countShowCards = COUNT_SHOW_CARDS_CLICK * countClickBtnShowCards;
-  const cardsArrayVisible = cardsArray.slice(shownCards, countShowCards);
-
-  cardsArrayVisible.forEach(function (item) {
-    item.classList.add("visible");
-    item.classList.remove("none");
-  });
-
-  const visibleCards = cards.querySelectorAll(".visible");
-
-  if (visibleCards.length == cardsArray.length) {
-    btnShowCards.classList.add("none");
-  }
-}
-
-//gallery
-document.addEventListener("DOMContentLoaded", () => {
-  let gallery = document.querySelector(".about-project-gallery");
-  if (!!gallery) {
-    baguetteBox.run(".about-project-gallery");
-  }
-});
 
 // calculator - page info
 let infoButtons = document.querySelectorAll(".calculator-info-btn");
@@ -230,53 +193,53 @@ function calculator() {
 }
 
 // to top button
-let body = document.body,
-  html = document.documentElement;
+// let body = document.body,
+//   html = document.documentElement;
 
-let pageHeight = Math.max(
-  body.scrollHeight,
-  body.offsetHeight,
-  html.clientHeight,
-  html.scrollHeight,
-  html.offsetHeight
-);
+// let pageHeight = Math.max(
+//   body.scrollHeight,
+//   body.offsetHeight,
+//   html.clientHeight,
+//   html.scrollHeight,
+//   html.offsetHeight
+// );
 
-let toTopButton = this.document.querySelector(".go-top");
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 400) {
-    toTopButton.classList.add("show");
-  } else {
-    toTopButton.classList.remove("show");
-  }
-});
+// let toTopButton = this.document.querySelector(".go-top");
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY > 400) {
+//     toTopButton.classList.add("show");
+//   } else {
+//     toTopButton.classList.remove("show");
+//   }
+// });
 
-toTopButton.addEventListener("click", function backToTop() {
-  if (window.scrollY > 0) {
-    window.scrollBy(0, -50);
-    setTimeout(backToTop, 10);
-  }
-});
+// toTopButton.addEventListener("click", function backToTop() {
+//   if (window.scrollY > 0) {
+//     window.scrollBy(0, -50);
+//     setTimeout(backToTop, 10);
+//   }
+// });
 
 // smooth scroll
-document.querySelectorAll('a[href^="#"').forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+// document.querySelectorAll('a[href^="#"').forEach((link) => {
+//   link.addEventListener("click", function (e) {
+//     e.preventDefault();
 
-    let href = this.getAttribute("href").substring(1);
+//     let href = this.getAttribute("href").substring(1);
 
-    const scrollTarget = document.getElementById(href);
+//     const scrollTarget = document.getElementById(href);
 
-    // const topOffset = document.querySelector('.scrollto').offsetHeight;
-    const topOffset = 0; // если не нужен отступ сверху
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - topOffset;
+//     // const topOffset = document.querySelector('.scrollto').offsetHeight;
+//     const topOffset = 0; // если не нужен отступ сверху
+//     const elementPosition = scrollTarget.getBoundingClientRect().top;
+//     const offsetPosition = elementPosition - topOffset;
 
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  });
-});
+//     window.scrollBy({
+//       top: offsetPosition,
+//       behavior: "smooth",
+//     });
+//   });
+// });
 
 //Popups
 let modal = document.getElementById("popup");
