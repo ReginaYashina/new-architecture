@@ -210,7 +210,7 @@ input:focus:-ms-input-placeholder {
   }
 
   &:before {
-    content: url(/img/icons/arrow_black.png);
+    content: url(../img/icons/arrow_black.png);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -224,7 +224,7 @@ input:focus:-ms-input-placeholder {
       transition: all 0.3s ease-in;
 
       &:before {
-        content: url(/img/icons/arrow.png);
+        content: url(../img/icons/arrow.png);
       }
     }
   }
@@ -258,7 +258,7 @@ input:focus:-ms-input-placeholder {
   }
 
   &:before {
-    content: url(/img/icons/arrow.png);
+    content: url(../img/icons/arrow.png);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -272,7 +272,7 @@ input:focus:-ms-input-placeholder {
       transition: all 0.3s ease-in;
 
       &:before {
-        content: url(/img/icons/arrow_black.png);
+        content: url(../img/icons/arrow_black.png);
       }
     }
   }

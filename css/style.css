@@ -208,7 +208,7 @@ input:focus:-ms-input-placeholder {
   margin-right: 30px;
 }
 .light-button:before {
-  content: url(/img/icons/arrow_black.png);
+  content: url(../img/icons/arrow_black.png);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -221,7 +221,7 @@ input:focus:-ms-input-placeholder {
     transition: all 0.3s ease-in;
   }
   .light-button:hover:before {
-    content: url(/img/icons/arrow.png);
+    content: url(../img/icons/arrow.png);
   }
 }
 
@@ -252,7 +252,7 @@ input:focus:-ms-input-placeholder {
   margin-right: 30px;
 }
 .dark-button:before {
-  content: url(/img/icons/arrow.png);
+  content: url(../img/icons/arrow.png);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -265,7 +265,7 @@ input:focus:-ms-input-placeholder {
     transition: all 0.3s ease-in;
   }
   .dark-button:hover:before {
-    content: url(/img/icons/arrow_black.png);
+    content: url(../img/icons/arrow_black.png);
   }
 }
 
