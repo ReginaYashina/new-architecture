@@ -273,3 +273,51 @@ window.onclick = function (event) {
     document.querySelector("body").classList.remove("_lock");
   }
 };
+
+
+// =========================
+// =========================
+// // load more
+// const COUNT_SHOW_CARDS_CLICK = 6;
+// const cards = document.querySelector(".cards");
+// const btnShowCards = document.querySelector(".show-cards");
+// let shownCards = COUNT_SHOW_CARDS_CLICK;
+// let countClickBtnShowCards = 1;
+// const cardsArray = Array.from(document.querySelectorAll(".card"));
+// const cardsArrayVisible = cardsArray.slice(0, COUNT_SHOW_CARDS_CLICK);
+
+// if (
+//   cardsArray.length >= shownCards &&
+//   btnShowCards.classList.contains("none")
+// ) {
+//   btnShowCards.classList.remove("none");
+// }
+
+// cardsArrayVisible.forEach(function (item) {
+//   item.classList.add("visible");
+//   item.classList.remove("none");
+// });
+
+// if (!!btnShowCards) {
+//   btnShowCards.addEventListener("click", sliceArrayCards);
+// }
+
+// function sliceArrayCards() {
+//   if (shownCards >= cardsArray.length) return;
+
+//   countClickBtnShowCards++;
+
+//   const countShowCards = COUNT_SHOW_CARDS_CLICK * countClickBtnShowCards;
+//   const cardsArrayVisible = cardsArray.slice(shownCards, countShowCards);
+
+//   cardsArrayVisible.forEach(function (item) {
+//     item.classList.add("visible");
+//     item.classList.remove("none");
+//   });
+
+//   const visibleCards = cards.querySelectorAll(".visible");
+
+//   if (visibleCards.length == cardsArray.length) {
+//     btnShowCards.classList.add("none");
+//   }
+// }

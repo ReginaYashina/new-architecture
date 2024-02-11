@@ -29,6 +29,10 @@ header,
 section {
   display: block;
 }
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
 
 html,
 body {
@@ -644,30 +648,24 @@ input:focus:-ms-input-placeholder {
 }
 
 .projects-photos {
-  margin: 40px 10px 50px;
+  // margin: 40px 0 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: 10px;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
 
-  @media (max-width: 768px) {
-    margin: 20px 10px 30px;
-  }
 }
 
 .project-photo-block {
   display: block;
   position: relative;
-  width: calc((100% / 2) - 5px);
-
-  @media (max-width: 1300px) {
-    width: 100%;
-  }
+  // width: calc((100% / 2) - 5px);
+  width: 33.333333%;
+  padding-bottom: 33.33333vh;
 
   @media (hover: hover) {
     &:hover>.project-photo-hover {
@@ -677,13 +675,25 @@ input:focus:-ms-input-placeholder {
   }
 
   @media (hover: none) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding-bottom: 0;
   }
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @media (max-width:1000px) {
+      position: relative;
+    }
   }
 }
 
@@ -692,7 +702,7 @@ input:focus:-ms-input-placeholder {
   text-align: center;
 
   & .project-photo-title {
-    color: #333;
+    color: #fff;
     font-size: 18px;
     margin-top: 7px;
 
@@ -704,7 +714,7 @@ input:focus:-ms-input-placeholder {
 
   & .project-photo-text {
     margin-top: 0;
-    color: #333;
+    color: #fff;
     max-width: none;
     font-size: 14px;
   }
@@ -731,6 +741,11 @@ input:focus:-ms-input-placeholder {
   @media (hover: none) {
     display: none;
   }
+
+  @media (max-width:1800px) {
+    padding: 50px;
+  }
+
 }
 
 .project-photo-title {
@@ -742,6 +757,14 @@ input:focus:-ms-input-placeholder {
   text-transform: uppercase;
   position: relative;
 
+  @media (max-width:1500px) {
+    font-size: 28px;
+  }
+
+  @media (max-width:1300px) {
+    font-size: 24px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -750,6 +773,11 @@ input:focus:-ms-input-placeholder {
     width: 150px;
     height: 5px;
     background: #cfcfcf;
+
+    @media (max-width:1500px) {
+      height: 3px;
+      width: 130px;
+    }
   }
 }
 
@@ -1806,9 +1834,9 @@ input:focus:-ms-input-placeholder {
 }
 
 // show more
-.none {
-  display: none;
-}
+// .none {
+//   display: none;
+// }
 
 // project-page
 .project-breadcrumbs {
@@ -2651,4 +2679,22 @@ input:focus:-ms-input-placeholder {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.archive-wrapper {
+  background: #333;
+
+}
+
+.archive-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(12, 12, 12, .8) 0%,
+      rgba(12, 12, 12, .8) 6%,
+      rgba(12, 12, 12, 0) 100%);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
 }
