@@ -1,3 +1,12 @@
+(function init100vh() {
+  function setHeight() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  setHeight();
+  window.addEventListener('resize', setHeight);
+})();
+
 // header & fixed button & fixed breadcrumbs
 // const header = document.getElementById("header");
 // const headerFix = document.getElementById("header-fix");
