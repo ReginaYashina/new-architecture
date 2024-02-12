@@ -2040,6 +2040,15 @@ input:focus:-ms-input-placeholder {
   }
 }
 
+.calculator-tabs {
+  margin-top: 120px;
+}
+
+.calculator-row {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .calculator-column {
   width: 49%;
 }
@@ -2093,9 +2102,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .calculator-block {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #818181;
-  margin-bottom: 32px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -2104,31 +2111,30 @@ input:focus:-ms-input-placeholder {
 }
 
 .calculator-column-left {
-  width: 74%;
-}
-@media (max-width: 768px) {
-  .calculator-column-left {
-    width: 85%;
-  }
+  width: 80%;
 }
 
 .calculator-caption {
-  color: #111;
-  font-size: 20px;
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
   line-height: 130%;
   /* 26px */
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-@media (max-width: 550px) {
-  .calculator-caption {
-    font-size: 18px;
-  }
+
+.calculator-subcaption {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 135%;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 .calculator-cost {
-  color: #333;
+  color: #fff;
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
@@ -2136,22 +2142,21 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 10px;
 }
 
+.calculator-info {
+  padding-left: 10px;
+}
+
 .calculator-info-block.open {
   display: block;
 }
 
 .calculator-info-text {
-  color: #333;
-  font-size: 18px;
+  color: #fff;
+  font-size: 12px;
   font-weight: 400;
   line-height: 130%;
   /* 23.4px */
-  margin-bottom: 12px;
-}
-@media (max-width: 550px) {
-  .calculator-info-text {
-    font-size: 16px;
-  }
+  margin-bottom: 10px;
 }
 .calculator-info-text:last-child {
   margin-bottom: 0;
@@ -2159,14 +2164,13 @@ input:focus:-ms-input-placeholder {
 
 .calculator-info-link {
   color: #818181;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 130%;
   border-bottom: 1px dashed #818181;
   padding-right: 23px;
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 .calculator-info-link:before {
