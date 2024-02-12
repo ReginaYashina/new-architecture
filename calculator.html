@@ -1,510 +1,287 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Цены</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/baguetteBox.min.css" />
+    <script src="js/baguetteBox.min.js" async></script>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Стоимость проектов</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/baguetteBox.min.css" />
-  <script src="js/baguetteBox.min.js" async></script>
-  <link rel="stylesheet" href="css/swiper.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <div class="wrapper calculator-page-wrapper">
-    <!--  -->
-    <div class="overlay" id="overlay"></div>
-    <div class="menu" id="menu">
-      <span class="burger-line"></span>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link nav-link-active"
-              href="https://reginayashina.github.io/architecture/">Главная</a></li>
-          <li class="nav-item"><a class="nav-link"
-              href="https://reginayashina.github.io/architecture/architecture.html">Архитектурные проекты</a></li>
-          <li class="nav-item"><a class="nav-link"
-              href="https://reginayashina.github.io/architecture/design.html">Дизайн интерьера</a></li>
-          <li class="nav-item"><a class="nav-link"
-              href="https://reginayashina.github.io/architecture/calculator.html">Стоимость проектов</a></li>
-        </ul>
-      </nav>
-      <div class="menu-contacts">
-        <p><a href="tel:+375292345694" class="footer-contact">+375 (29) 234 56 94</a></p>
-        <p><a href="mailto:info@rmarchitects.by" class="footer-contact">info@rmarchitects.by</a></p>
-        <div class="socials">
-          <a href="#" class="social-link">
-            <img src="img/icons/tg.svg" alt="telegram-icon" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="img/icons/viber.svg" alt="viber-icon" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="img/icons/inst.svg" alt="instagram-icon" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <section class="fullscreen">
-      <header class="header" id="header">
-        <div class="header-inner">
-          <div class="logo-wrapper">
-            <a href="https://reginayashina.github.io/architecture/" class="logo"><img src="img/icons/logo.png"
-                alt="logo" /></a>
-            <div class="description">
-              <p>Архитектурное проектирование</p>
-              <p>Дизайн интерьеров</p>
-            </div>
-          </div>
-          <div class="burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-        </div>
-      </header>
-      <header class="header" id="header-fix">
-        <div class="header-inner">
-          <div class="logo-wrapper">
-            <a href="https://reginayashina.github.io/architecture/" class="logo"><img src="img/icons/logo_black.png"
-                alt="logo" /></a>
-            <div class="description description-black">
-              <p>Архитектурное проектирование</p>
-              <p>Дизайн интерьеров</p>
-            </div>
-          </div>
-          <div class="burger burger-black">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-        </div>
-      </header>
-      <div class="breadcrumbs project-breadcrumbs">
-        <a href="/">Главная</a>
-        <p class="divider">/</p>
-        <p>Стоимость проектов</p>
-      </div>
-      <div class="photo-overlay"></div>
-      <img src="img/calculator/main.jpg" alt="project-photo" class="fullscreen-image" />
-      <h1 class="calculator-main-title title">Рассчитать стоимость проекта <span
-          class="calculator-main-subtitle subtitle">Онлайн-калькулятор</span></h1>
-
-      <a href="#calculator-section" class="down-arrow"><img src="img/icons/down.png" alt="down" /></a>
-      <div class="callback-button popup-link" id="callback-button"><svg width="40" height="40" viewBox="0 0 40 40"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19.5176 8.04756C19.5173 7.96541 19.5333 7.88403 19.5647 7.80809C19.596 7.73215 19.642 7.66315 19.7001 7.60506C19.7582 7.54698 19.8272 7.50095 19.9031 7.46963C19.9791 7.43831 20.0604 7.42231 20.1426 7.42256C26.8301 7.27881 32.7176 13.1726 32.5801 19.8538C32.5801 20.0196 32.5142 20.1785 32.397 20.2957C32.2798 20.413 32.1209 20.4788 31.9551 20.4788C31.7893 20.4788 31.6304 20.413 31.5132 20.2957C31.3959 20.1785 31.3301 20.0196 31.3301 19.8538C31.4551 13.8401 26.1551 8.54756 20.1426 8.67256C19.977 8.67206 19.8183 8.60606 19.7012 8.48895C19.5841 8.37185 19.5181 8.21317 19.5176 8.04756ZM36.8488 33.8476C36.1303 34.9209 35.1692 35.8101 34.0432 36.4431C32.9172 37.0762 31.6581 37.4352 30.3676 37.4913C27.9632 37.5957 25.5782 36.4994 23.4676 35.5226C19.2473 33.6952 15.4222 31.0652 12.2051 27.7788C8.964 24.6031 6.35903 20.8378 4.53009 16.6851C1.41134 10.7663 1.95509 5.97256 6.08009 3.22256C7.77384 1.99756 9.84884 2.35381 11.3551 4.14131C12.9909 6.0372 14.5103 8.03043 15.9051 10.1101C16.7801 12.0601 15.3926 13.4288 14.2801 14.5288C12.8676 15.9226 12.1863 16.7226 13.3676 18.1913C15.7862 21.55 18.7501 24.4801 22.1363 26.8601C23.7301 28.0876 25.1963 25.8319 26.5676 24.7038C26.9892 24.2381 27.5565 23.9295 28.1765 23.8284C28.7965 23.7273 29.4324 23.8399 29.9801 24.1476C32.342 25.8457 35.1782 27.6369 36.9113 29.8726C37.2852 30.4706 37.4783 31.164 37.4672 31.8693C37.4561 32.5745 37.2414 33.2615 36.8488 33.8476Z" />
-          <path
-            d="M19.5176 3.32256C19.5178 3.24003 19.5344 3.15836 19.5663 3.08223C19.5981 3.00611 19.6447 2.93703 19.7034 2.87896C19.762 2.82089 19.8316 2.77497 19.908 2.74384C19.9845 2.71271 20.0663 2.69699 20.1488 2.69756C29.3676 2.50506 37.4932 10.6369 37.3051 19.8538C37.3051 20.0196 37.2392 20.1785 37.122 20.2958C37.0048 20.413 36.8458 20.4788 36.6801 20.4788C36.5143 20.4788 36.3553 20.413 36.2381 20.2958C36.1209 20.1785 36.0551 20.0196 36.0551 19.8538C36.2332 11.3063 28.6932 3.76756 20.1488 3.94756C20.0663 3.94814 19.9845 3.93241 19.908 3.90129C19.8316 3.87016 19.762 3.82424 19.7034 3.76617C19.6447 3.7081 19.5981 3.63902 19.5663 3.5629C19.5344 3.48677 19.5178 3.4051 19.5176 3.32256ZM19.5176 12.7663C19.5181 12.6007 19.5841 12.442 19.7012 12.3249C19.8183 12.2078 19.977 12.1418 20.1426 12.1413C22.187 12.1446 24.1468 12.9582 25.5925 14.4039C27.0381 15.8496 27.8518 17.8093 27.8551 19.8538C27.8551 20.0196 27.7892 20.1785 27.672 20.2958C27.5548 20.413 27.3958 20.4788 27.2301 20.4788C27.0643 20.4788 26.9053 20.413 26.7881 20.2958C26.6709 20.1785 26.6051 20.0196 26.6051 19.8538C26.6028 18.1406 25.9212 16.4981 24.7097 15.2867C23.4982 14.0752 21.8558 13.3936 20.1426 13.3913C20.0604 13.3916 19.9791 13.3756 19.9031 13.3442C19.8272 13.3129 19.7582 13.2669 19.7001 13.2088C19.642 13.1507 19.596 13.0817 19.5647 13.0058C19.5333 12.9298 19.5173 12.8485 19.5176 12.7663Z" />
-        </svg></div>
-    </section>
-    <section class="calculator-section" id="calculator-section">
-      <div class="container">
-        <h3 class="title"><strong>Выберите состав работ</strong></h3>
-        <form action="#" class="calculator">
-          <div class="calculator-column">
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">
-                  Архитектурно-планировочная концепция
-                </p>
-                <p class="calculator-cost"><span>10</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk1"
-                  name="calculator-checkbox-1" />
-                <label for="chk1" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Визуализация</p>
-                <p class="calculator-cost"><span>400</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk2"
-                  name="calculator-checkbox-2" />
-                <label for="chk2" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">
-                  Архитектурно-строительный проект
-                </p>
-                <p class="calculator-cost"><span>10</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk3"
-                  name="calculator-checkbox-3" />
-                <label for="chk3" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Инженерные сети</p>
-                <p class="calculator-cost"><span>5</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk4"
-                  name="calculator-checkbox-4" />
-                <label for="chk4" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Дизайн интерьера</p>
-                <p class="calculator-cost"><span>40</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk6"
-                  name="calculator-checkbox-6" />
-                <label for="chk6" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Реализация</p>
-                <p class="calculator-cost">от <span>300</span> € м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <input type="checkbox" class="calculator-input calculator-input-square" id="chk7"
-                  name="calculator-checkbox-7" />
-                <label for="chk7" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Авторский надзор</p>
-                <p class="calculator-cost"><span>500</span> € месяц</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <!-- <input type="checkbox" class="calculator-input calculator-input-month" id="chk5"
-                  name="calculator-checkbox-5" />
-                <label for="chk5" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label> -->
-              </div>
-            </div>
-            <div class="calculator-block">
-              <div class="calculator-column-left">
-                <p class="calculator-caption">Ландшафтный дизайн</p>
-                <p class="calculator-cost">от <span>70</span> € 100 м²</p>
-                <div class="calculator-info">
-                  <div class="calculator-info-block">
-                    <p class="calculator-info-text">
-                      Опыт и квалификация не могут стоить дешево, а работа со
-                      вчерашними выпусниками курсов по факту может оказаться не
-                      только более дорогой на этапе реализации, но и
-                      небезопасной.
-                    </p>
-                    <p class="calculator-info-text">
-                      Наша команда из архитекторов, дизайнеров, конструкторов и
-                      инженеров тратит более 700 часов работы чтобы создать для
-                      Вас по настоящему идеальный проект.
-                    </p>
-                    <a href="#" class="calculator-info-link">Получить пример проекта</a>
-                  </div>
-                  <p class="calculator-info-btn">Развернуть</p>
-                </div>
-              </div>
-              <div class="calculator-column-right">
-                <!-- <input type="checkbox" class="calculator-input" id="chk8" name="calculator-checkbox-8" />
-                <label for="chk8" class="calculator-label">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1200_155)">
-                      <path
-                        d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1200_155">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </label> -->
-              </div>
-            </div>
-          </div>
-          <div class="calculator-column calculator-column-sticky">
-            <h3 class="title calculator-title"><strong>Укажите площадь</strong></h3>
-            <input type="number" class="calculator-area-input" placeholder="Введите значение" />
-            <h3 class="title calculator-title"><strong>Итоговая стоимость проекта</strong></h3>
-            <div class="calculator-finish-price"><span>0</span> $</div>
-            <div class="calculator-inner-form">
-              <input type="text" class="calculator-input-info" placeholder="Имя" />
-              <input type="tel" class="calculator-input-info" placeholder="Номер телефона" />
-              <button type="submit" class="light-button calculator-button">
-                Заказать проект
+  <body>
+    <div class="wrapper">
+      <!--  -->
+      <div class="overlay" id="overlay"></div>
+      <div class="menu" id="menu">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-active"
+                href="https://reginayashina.github.io/new-architecture/about.html"
+                >О нас</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://reginayashina.github.io/new-architecture/archive.html"
+                >Проекты</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://reginayashina.github.io/new-architecture/calculator.html"
+                >Цены</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-footer">
+          <div class="menu-form">
+            <p class="menu-form-title"><strong>Напишите</strong> нам</p>
+            <p class="menu-form-subtitle">
+              И мы ответим на любые интересующие вас вопросы
+            </p>
+            <form action="" class="form">
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Имя"
+                required
+              />
+              <input
+                type="phone"
+                class="form-input"
+                placeholder="Номер телефона"
+                required
+              />
+              <button class="form-button dark-button">
+                <span>Получить консультацию</span>
               </button>
-            </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <a href="https://reginayashina.github.io/architecture/" class="footer-logo"><img src="img/icons/logo.png"
-              alt="logo" /></a>
-          <p class="footer-description">
-            Архитектурное проектирование и дизайн интерьеров
-          </p>
-          <a href="tel:+375292345694" class="footer-contact">+375 (29) 234 56 94</a>
-          <a href="mailto:info@rmarchitects.by" class="footer-contact">info@rmarchitects.by</a>
-          <div class="socials">
-            <a href="#" class="social-link">
-              <img src="img/icons/tg.svg" alt="telegram-icon" />
-            </a>
-            <a href="#" class="social-link">
-              <img src="img/icons/viber.svg" alt="viber-icon" />
-            </a>
-            <a href="#" class="social-link">
-              <img src="img/icons/inst.svg" alt="instagram-icon" />
-            </a>
+          <div class="menu-contacts">
+            <p>
+              <a href="tel:+375292345694" class="footer-contact"
+                >+375 (29) 234 56 94</a
+              >
+            </p>
+            <p>
+              <a href="mailto:info@rmarchitects.by" class="footer-contact"
+                >info@rmarchitects.by</a
+              >
+            </p>
+            <div class="socials">
+              <a href="#" class="social-link">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32.2398 2.57404C31.8078 2.59383 31.4009 2.71752 31.0392 2.85604H31.0342C30.6675 2.99952 28.9243 3.72184 26.277 4.81521C23.6296 5.91353 20.1936 7.33837 16.7827 8.75332C9.97088 11.5783 3.27464 14.3587 3.27464 14.3587L3.35501 14.329C3.35501 14.329 2.89285 14.4774 2.4106 14.804C2.16445 14.9623 1.89319 15.18 1.65709 15.5213C1.42098 15.8627 1.23009 16.3871 1.30042 16.9264C1.41596 17.8417 2.01877 18.3908 2.45079 18.6926C2.88783 18.9993 3.30478 19.1428 3.30478 19.1428H3.31482L9.59413 21.2257C9.87544 22.1162 11.5081 27.4 11.8999 28.6171C12.131 29.3443 12.357 29.7995 12.6383 30.1458C12.774 30.3239 12.9347 30.4723 13.1256 30.5911C13.201 30.6356 13.2813 30.6702 13.3617 30.6999C13.3868 30.7148 13.4119 30.7197 13.4421 30.7246L13.3768 30.7098C13.3969 30.7147 13.4119 30.7296 13.427 30.7345C13.4772 30.7494 13.5124 30.7543 13.5777 30.7642C14.5724 31.0611 15.3711 30.4525 15.3711 30.4525L15.4163 30.4179L19.1236 27.0933L25.3376 31.7883L25.4783 31.8477C26.7743 32.4068 28.0854 32.0951 28.7787 31.5459C29.4769 30.9918 29.7482 30.2843 29.7482 30.2843L29.7934 30.1705L34.5958 5.94321C34.7314 5.34458 34.7666 4.78552 34.6159 4.24131C34.4652 3.6971 34.0784 3.18752 33.6112 2.91541C33.139 2.63836 32.6718 2.55425 32.2398 2.57404ZM32.1092 5.17142C32.1042 5.25058 32.1192 5.24068 32.0841 5.39405V5.40889L27.3269 29.3839C27.3068 29.4185 27.2716 29.4927 27.1762 29.567C27.0757 29.6461 26.9953 29.6956 26.5784 29.5323L18.9779 23.7934L14.3865 27.9145L15.351 21.849C15.351 21.849 27.2566 10.9203 27.7689 10.4503C28.2813 9.98027 28.1105 9.88133 28.1105 9.88133C28.1457 9.30743 27.3369 9.71312 27.3369 9.71312L11.6789 19.2665L11.6738 19.2418L4.16881 16.7532V16.7483C4.16378 16.7483 4.15374 16.7433 4.14871 16.7433C4.15374 16.7433 4.1889 16.7285 4.1889 16.7285L4.22909 16.7087L4.26928 16.6939C4.26928 16.6939 10.9705 13.9134 17.7823 11.0885C21.1933 9.67354 24.6293 8.24869 27.2716 7.15037C29.914 6.057 31.8681 5.25552 31.9786 5.211C32.0841 5.17142 32.0338 5.17142 32.1092 5.17142Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1263_368)">
+                    <path
+                      d="M34.7326 20.8393C35.8066 11.7988 34.2166 6.09129 31.3486 3.50979L31.3501 3.50829C26.7211 -0.900207 11.0881 -1.55271 5.55012 3.70629C3.06312 6.27879 2.18712 10.0543 2.09112 14.7283C1.99512 19.4038 1.88112 28.1623 10.0426 30.5383H10.0501L10.0426 34.1668C10.0426 34.1668 9.98712 35.6368 10.9261 35.9323C12.0001 36.2803 12.4861 35.5978 15.8266 31.6078C21.4126 32.0923 25.7026 30.9823 26.1901 30.8203C27.3181 30.4423 33.7006 29.5978 34.7326 20.8393ZM16.3771 29.0548C16.3771 29.0548 12.8416 33.4633 11.7421 34.6078C11.3821 34.9798 10.9876 34.9453 10.9936 34.2073C10.9936 33.7228 11.0206 28.1833 11.0206 28.1833C4.10112 26.2003 4.50912 18.7423 4.58412 14.8408C4.65912 10.9378 5.37312 7.74129 7.47912 5.58879C12.3376 1.03329 26.0431 2.05179 29.5351 5.33379C33.8041 9.11829 32.2846 19.8103 32.2936 20.1748C31.4161 27.4858 26.2441 27.9493 25.2931 28.2658C24.8866 28.4008 21.1141 29.3713 16.3771 29.0548Z"
+                    />
+                    <path
+                      d="M18.333 6.44531C17.7555 6.44531 17.7555 7.34531 18.333 7.35281C22.8135 7.38731 26.5035 10.5103 26.544 16.2388C26.544 16.8433 27.429 16.8358 27.4215 16.2313H27.42C27.372 10.0588 23.343 6.47981 18.333 6.44531Z"
+                    />
+                    <path
+                      d="M24.2267 15.2891C24.2132 15.8861 25.0967 15.9146 25.1042 15.3101C25.1777 11.9066 23.0792 9.10307 19.1357 8.80757C18.5582 8.76557 18.4982 9.67307 19.0742 9.71507C22.4942 9.97457 24.2957 12.3086 24.2267 15.2891Z"
+                    />
+                    <path
+                      d="M23.2816 19.1607C22.5406 18.7317 21.7861 18.9987 21.4741 19.4202L20.8216 20.2647C20.4901 20.6937 19.8706 20.6367 19.8706 20.6367C15.3496 19.4412 14.1406 14.7102 14.1406 14.7102C14.1406 14.7102 14.0851 14.0697 14.4991 13.7262L15.3151 13.0512C15.7231 12.7272 15.9811 11.9472 15.5656 11.1807C14.4556 9.17517 13.7101 8.48367 13.3306 7.95267C12.9316 7.45317 12.3316 7.34067 11.7076 7.67817H11.6941C10.3966 8.43717 8.97608 9.85767 9.43058 11.3202C10.2061 12.8622 11.6311 17.7777 16.1731 21.4917C18.3076 23.2482 21.6856 25.0482 23.1196 25.4637L23.1331 25.4847C24.5461 25.9557 25.9201 24.4797 26.6536 23.1432V23.1327C26.9791 22.4862 26.8711 21.8742 26.3956 21.4737C25.5526 20.6517 24.2806 19.7442 23.2816 19.1607Z"
+                    />
+                    <path
+                      d="M19.7535 12.156C21.195 12.24 21.894 12.993 21.969 14.5395C21.996 15.144 22.8735 15.102 22.8465 14.4975C22.7505 12.4785 21.6975 11.3535 19.8015 11.2485C19.224 11.214 19.17 12.1215 19.7535 12.156Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1263_368">
+                      <rect width="36" height="36" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M34.6297 11.1371C34.5517 9.36696 34.2654 8.14998 33.8553 7.09544C33.4323 5.97608 32.7815 4.97392 31.9288 4.14082C31.0957 3.29475 30.0869 2.63732 28.9805 2.22089C27.9199 1.81083 26.7093 1.52457 24.9391 1.44652C23.1557 1.36186 22.5895 1.34229 18.0663 1.34229C13.5431 1.34229 12.9769 1.36186 11.2001 1.43991C9.42995 1.51796 8.21297 1.80447 7.15869 2.21428C6.03907 2.63732 5.03691 3.28814 4.20381 4.14082C3.35774 4.97392 2.70056 5.98269 2.28388 7.08909C1.87381 8.14998 1.58755 9.36035 1.50951 11.1305C1.42485 12.9139 1.40527 13.4801 1.40527 18.0033C1.40527 22.5265 1.42485 23.0927 1.5029 24.8695C1.58094 26.6397 1.86746 27.8566 2.27753 28.9112C2.70056 30.0305 3.35774 31.0327 4.20381 31.8658C5.03691 32.7119 6.04568 33.3693 7.15208 33.7857C8.21297 34.1958 9.42334 34.4821 11.1938 34.5601C12.9703 34.6384 13.5367 34.6577 18.0599 34.6577C22.5832 34.6577 23.1493 34.6384 24.9261 34.5601C26.6963 34.4821 27.9133 34.1958 28.9676 33.7857C31.2065 32.9201 32.9767 31.1499 33.8424 28.9112C34.2522 27.8503 34.5387 26.6397 34.6167 24.8695C34.6948 23.0927 34.7144 22.5265 34.7144 18.0033C34.7144 13.4801 34.7077 12.9139 34.6297 11.1371ZM31.6296 24.7393C31.5579 26.3664 31.2846 27.245 31.0568 27.8307C30.497 29.2821 29.3451 30.434 27.8937 30.9938C27.308 31.2216 26.423 31.4949 24.8023 31.5663C23.0451 31.6446 22.5181 31.6639 18.0729 31.6639C13.6277 31.6639 13.0941 31.6446 11.3433 31.5663C9.71621 31.4949 8.8376 31.2216 8.25186 30.9938C7.5296 30.7269 6.87217 30.3038 6.33855 29.7506C5.78535 29.2104 5.36232 28.5596 5.09538 27.8373C4.86759 27.2516 4.5943 26.3664 4.52286 24.7459C4.44456 22.9887 4.42524 22.4614 4.42524 18.0163C4.42524 13.5711 4.44456 13.0375 4.52286 11.2869C4.5943 9.65983 4.86759 8.78122 5.09538 8.19548C5.36232 7.47297 5.78535 6.81579 6.34516 6.28192C6.88514 5.72872 7.53596 5.30569 8.25847 5.039C8.84421 4.81121 9.72943 4.53792 11.3499 4.46623C13.1071 4.38818 13.6344 4.3686 18.0793 4.3686C22.531 4.3686 23.058 4.38818 24.8089 4.46623C26.436 4.53792 27.3146 4.81121 27.9003 5.039C28.6226 5.30569 29.28 5.72872 29.8136 6.28192C30.3668 6.82215 30.7899 7.47297 31.0568 8.19548C31.2846 8.78122 31.5579 9.66619 31.6296 11.2869C31.7076 13.0441 31.7272 13.5711 31.7272 18.0163C31.7272 22.4614 31.7076 22.9821 31.6296 24.7393Z"
+                  />
+                  <path
+                    d="M18.0664 9.44531C13.3415 9.44531 9.50806 13.2785 9.50806 18.0036C9.50806 22.7287 13.3415 26.5619 18.0664 26.5619C22.7914 26.5619 26.6247 22.7287 26.6247 18.0036C26.6247 13.2785 22.7914 9.44531 18.0664 9.44531ZM18.0664 23.5552C15.0011 23.5552 12.5148 21.0691 12.5148 18.0036C12.5148 14.9381 15.0011 12.4521 18.0664 12.4521C21.1318 12.4521 23.6179 14.9381 23.6179 18.0036C23.6179 21.0691 21.1318 23.5552 18.0664 23.5552Z"
+                  />
+                  <path
+                    d="M28.9606 9.10686C28.9606 10.2102 28.0659 11.1048 26.9623 11.1048C25.859 11.1048 24.9644 10.2102 24.9644 9.10686C24.9644 8.00326 25.859 7.10889 26.9623 7.10889C28.0659 7.10889 28.9606 8.00326 28.9606 9.10686Z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
           <a href="#" class="footer-link">Политика конфиденциальности</a>
         </div>
       </div>
-      <div class="go-top">
-        <img src="/img/icons/toTop.png" alt="to top" />
-      </div>
-      <!-- popup -->
-      <div class="popup" id="popup">
-        <div class="popup-content">
-          <div class="popup-inner">
-            <div class="popup-close">
-              <img src="/img/icons/close.svg" alt="close" />
+      <!--  -->
+      <section class="fullscreen-about">
+        <header class="header" id="header">
+          <div class="header-inner">
+            <div class="logo-wrapper">
+              <a
+                href="https://reginayashina.github.io/new-architecture/"
+                class="logo"
+                ><img src="img/icons/logo.png" alt="logo"
+              /></a>
+              <div class="description">
+                <p>Architectural Engineering</p>
+                <p>Interior Design</p>
+              </div>
             </div>
-            <p class="popup-title">Получите консультацию</p>
-            <p class="popup-subtitle">
-              Заполните форму и мы свяжемся с Вами в ближайшее время
-            </p>
-            <form action="" class="form">
-              <input type="text" class="form-input" placeholder="Имя" required />
-              <input type="phone" class="form-input" placeholder="Номер телефона" required />
-              <button class="form-button light-button">
-                <span>Получить консультацию</span>
-              </button>
-            </form>
-            <p class="popup-info">
-              Нажимая на кнопку, вы даете согласие на обработку персональных
-              данных
-            </p>
+            <div class="burger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </header>
+        <div class="work-tabs _tabs">
+          <div class="work-tabs-header">
+            <div class="work-tabs-item _tabs-item _active">Архитектура</div>
+            <div class="work-tabs-item _tabs-item">Дизайн интерьеров</div>
+            <div class="work-tabs-item _tabs-item">Прочие услуги</div>
+          </div>
+          <div class="work-tabs-body">
+            <div class="work-tabs-block _tabs-block _active">
+              <div class="calculator-row">
+                <form action="#" class="calculator">
+                  <div class="calculator-column">
+                    <div class="calculator-block">
+                      <div class="calculator-column-left">
+                        <p class="calculator-caption">
+                          Архитектурно-планировочная концепция
+                        </p>
+                        <p class="calculator-cost"><span>10</span> € м²</p>
+                        <div class="calculator-info">
+                          <div class="calculator-info-block">
+                            <p class="calculator-info-text">
+                              Опыт и квалификация не могут стоить дешево, а
+                              работа со вчерашними выпусниками курсов по факту
+                              может оказаться не только более дорогой на этапе
+                              реализации, но и небезопасной.
+                            </p>
+                            <p class="calculator-info-text">
+                              Наша команда из архитекторов, дизайнеров,
+                              конструкторов и инженеров тратит более 700 часов
+                              работы чтобы создать для Вас по настоящему
+                              идеальный проект.
+                            </p>
+                            <p class="calculator-info-link _popup-link">
+                              Получить пример проекта
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calculator-column-right">
+                        <input
+                          type="checkbox"
+                          class="calculator-input calculator-input-square"
+                          id="chk1"
+                          name="calculator-checkbox-1"
+                        />
+                        <label for="chk1" class="calculator-label">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_1200_155)">
+                              <path
+                                d="M15.6282 2.61507C15.1332 2.11937 14.3293 2.11968 13.8336 2.61507L5.75659 10.6924L2.1667 7.10254C1.671 6.60684 0.867479 6.60684 0.371777 7.10254C-0.123926 7.59824 -0.123926 8.40177 0.371777 8.89747L4.85894 13.3846C5.10663 13.6323 5.43143 13.7565 5.75625 13.7565C6.08107 13.7565 6.40617 13.6326 6.65387 13.3846L15.6282 4.40996C16.1239 3.91461 16.1239 3.11074 15.6282 2.61507Z"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1200_155">
+                                <rect width="16" height="16" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-column calculator-column-sticky">
+                    <h3 class="title calculator-title">
+                      <strong>Укажите площадь</strong>
+                    </h3>
+                    <input
+                      type="number"
+                      class="calculator-area-input"
+                      placeholder="Введите значение"
+                    />
+                    <h3 class="title calculator-title">
+                      <strong>Итоговая стоимость проекта</strong>
+                    </h3>
+                    <div class="calculator-finish-price"><span>0</span> $</div>
+                    <div class="calculator-inner-form">
+                      <input
+                        type="text"
+                        class="calculator-input-info"
+                        placeholder="Имя"
+                      />
+                      <input
+                        type="tel"
+                        class="calculator-input-info"
+                        placeholder="Номер телефона"
+                      />
+                      <button
+                        type="submit"
+                        class="light-button calculator-button"
+                      >
+                        Заказать проект
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="work-tabs-block _tabs-block">22222</div>
+            <div class="work-tabs-block _tabs-block">3333</div>
           </div>
         </div>
-      </div>
-      <!--  -->
-    </footer>
-  </div>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+      </section>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
