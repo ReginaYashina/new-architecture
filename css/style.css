@@ -1425,6 +1425,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .overlay {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -1440,6 +1441,7 @@ input:focus:-ms-input-placeholder {
   }
 }
 .overlay.is-active {
+  display: block;
   opacity: 1;
   transition: opacity 1s ease;
   z-index: 15;
@@ -2688,4 +2690,40 @@ input:focus:-ms-input-placeholder {
   left: 0;
   z-index: 2;
   pointer-events: none;
+}
+
+.fullscreen-project {
+  height: 100vh;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .fullscreen-project {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.new-project-body {
+  display: flex;
+}
+
+.new-project-content {
+  width: 50%;
+  background: #333;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .new-project-content {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.new-project-photos {
+  width: 50%;
+  overflow: auto;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .new-project-photos {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 }

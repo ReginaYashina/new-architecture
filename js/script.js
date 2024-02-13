@@ -321,3 +321,11 @@ window.onclick = function (event) {
 //     btnShowCards.classList.add("none");
 //   }
 // }
+
+//gallery
+document.addEventListener("DOMContentLoaded", () => {
+  let gallery = document.querySelector(".new-project-gallery");
+  if (!!gallery) {
+    baguetteBox.run(".new-project-gallery");
+  }
+});
