@@ -1,10 +1,10 @@
 (function init100vh() {
   function setHeight() {
     var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
   setHeight();
-  window.addEventListener('resize', setHeight);
+  window.addEventListener("resize", setHeight);
 })();
 
 // header & fixed button & fixed breadcrumbs
@@ -112,7 +112,7 @@ new Swiper(".fullscreen-slider", {
 new Swiper(".fullscreen-about-slider", {
   navigation: {
     nextEl: ".fullscreen-about-next",
-    prevEl: ".fullscreen-about-prev"
+    prevEl: ".fullscreen-about-prev",
   },
   speed: 2000,
   // effect: "cube",
@@ -147,58 +147,59 @@ for (let index = 0; index < tabs.length; index++) {
 }
 
 // calculator - page info
-let infoButtons = document.querySelectorAll(".calculator-info-btn");
-infoButtons.forEach(function (item) {
-  item.addEventListener("click", function () {
-    if (item.classList.contains("open")) {
-      item.classList.remove("open");
-      item.innerText = "Развернуть";
-      item
-        .closest(".calculator-info")
-        .querySelector(".calculator-info-block")
-        .classList.remove("open");
-    } else {
-      item.classList.add("open");
-      item.innerText = "Свернуть";
-      item
-        .closest(".calculator-info")
-        .querySelector(".calculator-info-block")
-        .classList.add("open");
-    }
-  });
-});
+// let infoButtons = document.querySelectorAll(".calculator-info-btn");
+// infoButtons.forEach(function (item) {
+//   item.addEventListener("click", function () {
+//     if (item.classList.contains("open")) {
+//       item.classList.remove("open");
+//       item.innerText = "Развернуть";
+//       item
+//         .closest(".calculator-info")
+//         .querySelector(".calculator-info-block")
+//         .classList.remove("open");
+//     } else {
+//       item.classList.add("open");
+//       item.innerText = "Свернуть";
+//       item
+//         .closest(".calculator-info")
+//         .querySelector(".calculator-info-block")
+//         .classList.add("open");
+//     }
+//   });
+// });
 
 // calculator
-let checkboxes = document.querySelectorAll(".calculator-input-square");
-let area = document.querySelector(".calculator-area-input");
-let monthInput = document.querySelector(".calculator-input-month");
+let calculators = document.querySelectorAll(".calculator-js");
 
-if (!!area) {
-  checkboxes.forEach(function (item) {
-    item.addEventListener("input", calculator);
-  });
-  area.addEventListener("input", calculator);
-}
+if (!!calculators) {
+  calculators.forEach(function (calc) {
+    let checkboxes = calc.querySelectorAll(".calculator-input-square");
+    let area = calc.querySelector(".calculator-area-input");
+    checkboxes.forEach(function (item) {
+      item.addEventListener("input", calculator);
+    });
+    area.addEventListener("input", calculator);
+    function calculator() {
+      let finishPrice = 0;
+      let checkedPrice;
+      let commonFinishPrice = 0;
+      let areaValue = calc.querySelector(".calculator-area-input").value;
+      for (let i = 0; i < checkboxes.length; i++) {
+        checkedPrice = Number(
+          checkboxes[i]
+            .closest(".calculator-block")
+            .querySelector(".calculator-cost span").innerText
+        );
+        if (checkboxes[i].checked) {
+          finishPrice += checkedPrice;
+          commonFinishPrice = finishPrice * areaValue;
+        }
 
-function calculator() {
-  let finishPrice = 0;
-  let checkedPrice;
-  let commonFinishPrice = 0;
-  let areaValue = document.querySelector(".calculator-area-input").value;
-  for (let i = 0; i < checkboxes.length; i++) {
-    checkedPrice = Number(
-      checkboxes[i]
-        .closest(".calculator-block")
-        .querySelector(".calculator-cost span").innerText
-    );
-    if (checkboxes[i].checked) {
-      finishPrice += checkedPrice;
-      commonFinishPrice = finishPrice * areaValue;
+        calc.querySelector(".calculator-finish-price span").innerText =
+          commonFinishPrice;
+      }
     }
-
-    document.querySelector(".calculator-finish-price span").innerText =
-      commonFinishPrice;
-  }
+  });
 }
 
 // to top button
@@ -273,7 +274,6 @@ window.onclick = function (event) {
     document.querySelector("body").classList.remove("_lock");
   }
 };
-
 
 // =========================
 // =========================
