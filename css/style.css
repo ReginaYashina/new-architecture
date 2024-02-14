@@ -1954,34 +1954,51 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 11px;
 }
 
+.about-project-list {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .about-project-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .about-project-list li {
-  padding-left: 36px;
+  padding-left: 30px;
   position: relative;
-  color: #333;
+  color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 130%;
-  /* 23.4px */
-  margin-bottom: 13px;
+  margin-right: 20px;
 }
 .about-project-list li:last-child {
-  margin-bottom: 0;
+  margin-right: 0;
+}
+@media (max-width: 600px) {
+  .about-project-list li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .in-progress:before {
-  content: url(../img/icons/chk_light.png);
+  content: url(../img/icons/chk_dark-new.png);
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  height: 22px;
 }
 
 .done:before {
-  content: url(../img/icons/chk_dark.png);
+  content: url(../img/icons/chk_light-new.png);
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  height: 22px;
 }
 
 .about-project-text {
@@ -2696,24 +2713,38 @@ input:focus:-ms-input-placeholder {
   height: 100vh;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 1130px) {
   .fullscreen-project {
-    height: calc(var(--vh, 1vh) * 100);
+    height: auto;
+    overflow: auto;
   }
 }
 
 .new-project-body {
   display: flex;
 }
+@media (max-width: 1130px) {
+  .new-project-body {
+    flex-direction: column;
+  }
+}
 
 .new-project-content {
   width: 50%;
   background: #333;
   height: 100vh;
+  padding: 155px 30px 40px;
+  overflow: auto;
+}
+@media (max-width: 1130px) {
+  .new-project-content {
+    width: 100%;
+    height: auto;
+  }
 }
 @media (max-width: 768px) {
   .new-project-content {
-    height: calc(var(--vh, 1vh) * 100);
+    padding-top: 130px;
   }
 }
 
@@ -2722,8 +2753,127 @@ input:focus:-ms-input-placeholder {
   overflow: auto;
   height: 100vh;
 }
-@media (max-width: 768px) {
+@media (max-width: 1130px) {
   .new-project-photos {
-    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    height: auto;
+  }
+}
+
+.new-project-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 135%;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .new-project-title {
+    font-size: 45px;
+  }
+}
+
+.new-project-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #fff;
+  margin-bottom: 12px;
+  max-width: 630px;
+}
+.new-project-text:last-child {
+  margin-bottom: 0;
+}
+
+.new-project-infoblock {
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  .new-project-infoblock {
+    margin: 45px 0 10px;
+  }
+}
+
+.new-project-row {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 12px;
+}
+.new-project-row:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .new-project-row:last-child {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .new-project-row {
+    height: auto;
+    align-items: flex-start;
+  }
+}
+
+.new-project-caption {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  width: 110px;
+}
+
+.new-project-info {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.new-project-form {
+  max-width: 266px;
+}
+.new-project-form .form-input {
+  height: 33px;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 25px;
+}
+.new-project-form .form-button {
+  height: 70px;
+  padding: 25px;
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .new-project-place {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-project-type {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-project-step {
+    order: 5;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-project-year {
+    order: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-project-area {
+    order: 4;
   }
 }
