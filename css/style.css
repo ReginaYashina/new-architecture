@@ -50,7 +50,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   opacity: 0;
-  transition: 0.5s;
+  transition: 1.5s;
 }
 body._lock {
   overflow: hidden;

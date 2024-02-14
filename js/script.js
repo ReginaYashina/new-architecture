@@ -330,4 +330,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelector("body").style.opacity = "1";
+  document.querySelector("body").style.transition = "1.5s";
 });
