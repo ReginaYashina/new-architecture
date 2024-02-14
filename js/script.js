@@ -328,4 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!!gallery) {
     baguetteBox.run(".new-project-gallery");
   }
+
+  document.querySelector("body").style.opacity = "1";
 });
