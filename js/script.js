@@ -323,12 +323,12 @@ window.onclick = function (event) {
 // }
 
 //gallery
-document.addEventListener("DOMContentLoaded", () => {
-  let gallery = document.querySelector(".new-project-gallery");
-  if (!!gallery) {
-    baguetteBox.run(".new-project-gallery");
-  }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   let gallery = document.querySelector(".new-project-gallery");
+//   if (!!gallery) {
+//     baguetteBox.run(".new-project-gallery");
+//   }
+// });
 
 // альтернатива событию DOMContentLoaded
 // document.onreadystatechange = function () {
@@ -342,5 +342,10 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     document.querySelector("body").style.opacity = "1";
     document.querySelector("body").style.transition = "1.5s";
+  }
+
+  let gallery = document.querySelector(".new-project-gallery");
+  if (!!gallery) {
+    baguetteBox.run(".new-project-gallery");
   }
 };
