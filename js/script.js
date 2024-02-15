@@ -331,8 +331,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // альтернатива событию DOMContentLoaded
+// document.onreadystatechange = function () {
+//   if (document.readyState == "interactive") {
+//     document.querySelector("body").style.opacity = "1";
+//     document.querySelector("body").style.transition = "1.5s";
+//   }
+// };
+// альтернатива событию load
 document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
+  if (document.readyState == "complete") {
     document.querySelector("body").style.opacity = "1";
     document.querySelector("body").style.transition = "1.5s";
   }
