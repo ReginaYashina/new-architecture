@@ -328,7 +328,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!!gallery) {
     baguetteBox.run(".new-project-gallery");
   }
-
-  document.querySelector("body").style.opacity = "1";
-  document.querySelector("body").style.transition = "1.5s";
 });
+
+// альтернатива событию DOMContentLoaded
+document.onreadystatechange = function () {
+  if (document.readyState == "interactive") {
+    document.querySelector("body").style.opacity = "1";
+    document.querySelector("body").style.transition = "1.5s";
+  }
+};
