@@ -7,27 +7,18 @@
   window.addEventListener("resize", setHeight);
 })();
 
-// header & fixed button & fixed breadcrumbs
+// header
 // const header = document.getElementById("header");
-// const headerFix = document.getElementById("header-fix");
-// const headerSimpleFix = document.getElementById("header-simple-fix");
-// const fullscreen = document.querySelector(".fullscreen");
-// const callbackButton = document.getElementById("callback-button");
-// const breadcrumbs = document.querySelector('.breadcrumbs');
 
-// if (!!headerSimpleFix) {
-//   const headerSimpleFixHeight = headerSimpleFix.offsetHeight;
-//   window.addEventListener("scroll", function () {
-//     let scrollDistance = window.scrollY;
-//     if (scrollDistance >= headerSimpleFixHeight) {
-//       headerSimpleFix.classList.add("sticky");
-//       breadcrumbs.classList.add("sticky");
-//     } else {
-//       headerSimpleFix.classList.remove("sticky");
-//       breadcrumbs.classList.remove("sticky");
-//     }
-//   });
-// }
+// const headerHeight = header.offsetHeight;
+// window.addEventListener("scroll", function () {
+//   let scrollDistance = window.scrollY;
+//   if (scrollDistance >= headerHeight) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// });
 
 // if (!!fullscreen) {
 //   // const fullscreenHeight = fullscreen.offsetHeight; //если после первого экрана должен появляться
