@@ -32,6 +32,7 @@ section {
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -281,12 +282,23 @@ input:focus:-ms-input-placeholder {
   }
 }
 
+#header {
+  transition: all 0.5s ease;
+}
+#header.sticky {
+  transition: all 0.5s ease;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   padding: 30px 30px 0;
+  z-index: 16;
 }
 @media (max-width: 600px) {
   .header {
@@ -2881,5 +2893,21 @@ input:focus:-ms-input-placeholder {
 @media (max-width: 600px) {
   .new-project-area {
     order: 4;
+  }
+}
+
+.to-top {
+  display: none;
+}
+@media (max-width: 768px) {
+  .to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    background: #2d2b2c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bolder;
   }
 }
