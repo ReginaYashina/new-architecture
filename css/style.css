@@ -2747,6 +2747,7 @@ input:focus:-ms-input-placeholder {
   height: 100vh;
   padding: 155px 30px 40px;
   overflow: auto;
+  position: relative;
 }
 @media (max-width: 1130px) {
   .new-project-content {
@@ -2854,7 +2855,12 @@ input:focus:-ms-input-placeholder {
 }
 
 .new-project-form {
-  max-width: 266px;
+  width: 266px;
+}
+@media (max-width: 500px) {
+  .new-project-form {
+    width: 100%;
+  }
 }
 .new-project-form .form-input {
   height: 33px;
@@ -2866,36 +2872,6 @@ input:focus:-ms-input-placeholder {
   padding: 25px;
   margin-top: 0;
 }
-@media (max-width: 600px) {
-  .new-project-place {
-    order: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  .new-project-type {
-    order: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .new-project-step {
-    order: 5;
-  }
-}
-
-@media (max-width: 600px) {
-  .new-project-year {
-    order: 3;
-  }
-}
-
-@media (max-width: 600px) {
-  .new-project-area {
-    order: 4;
-  }
-}
-
 .to-top {
   display: none;
 }
@@ -2909,5 +2885,60 @@ input:focus:-ms-input-placeholder {
     color: #fff;
     font-size: 16px;
     font-weight: bolder;
+  }
+}
+
+.new-project-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .new-project-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.small-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3px;
+  border: 2px solid #fff;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  /* 20.8px */
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  background: transparent;
+  width: 147px;
+}
+@media (max-width: 500px) {
+  .small-button {
+    margin-top: 35px;
+  }
+}
+.small-button span {
+  margin-right: 30px;
+}
+.small-button:before {
+  content: url(../img/icons/arrow.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+@media (hover: hover) {
+  .small-button:hover {
+    background: #fff;
+    color: #111;
+    transition: all 0.3s ease-in;
+  }
+  .small-button:hover:before {
+    content: url(../img/icons/arrow_black.png);
   }
 }
